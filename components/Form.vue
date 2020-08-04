@@ -69,13 +69,13 @@
       </v-container>
     </v-form>
     <v-snackbar v-model="successSB" color="success" :timeout="0">
-      > Formulaire envoyé
+      Formulaire envoyé
       <v-btn icon="icon" @click="successSB = false">
         <v-icon>mdi-close</v-icon>
       </v-btn>
     </v-snackbar>
     <v-snackbar v-model="errorSB" color="error" :timeout="0">
-      > Une erreur est survenue
+      Une erreur est survenue
       <v-btn icon="icon" @click="arrorSB = false">
         <v-icon>mdi-close</v-icon>
       </v-btn>
@@ -129,13 +129,13 @@ export default {
             'form-name': 'contact',
             contenu: `
 
-                    ${this.civil} ${this.name}
+                ${this.civil} ${this.name}
 
-                    ${this.phone}   ${this.email}
+                ${this.phone}   ${this.email}
 
-                    ${this.address}
+                ${this.address}
 
-                    ${this.message}
+                ${this.message}
             `,
           }),
         })
