@@ -1,7 +1,7 @@
 <template>
   <v-row justify="center">
     <v-col cols="12" md="12">
-      <v-expansion-panels multiple="multiple">
+      <v-expansion-panels multiple>
         <v-expansion-panel>
           <v-expansion-panel-header>
             Formulaire de contact
@@ -16,7 +16,7 @@
         <v-expansion-panel>
           <v-expansion-panel-header>Téléphone</v-expansion-panel-header>
           <v-expansion-panel-content>
-            <v-card flat="flat">
+            <v-card flat>
               <v-card-title>06 70 13 08 03</v-card-title>
               <v-card-actions>
                 <v-btn href="tel:+33670130803">
@@ -36,7 +36,7 @@
         <v-expansion-panel>
           <v-expansion-panel-header>Mail</v-expansion-panel-header>
           <v-expansion-panel-content>
-            <v-card flat="flat">
+            <v-card flat>
               <v-card-title>camille-giraud@orange.fr</v-card-title>
               <v-card-actions>
                 <v-btn href="mailto:camille-giraud@orange.fr">
@@ -61,7 +61,7 @@
             <v-icon>mdi-google-maps</v-icon>
           </v-expansion-panel-header>
           <v-expansion-panel-content>
-            <v-card flat="flat">
+            <v-card flat>
               <v-card-title>
                 11 Rue des Longines <br />
                 Écardenville sur Eure <br />
