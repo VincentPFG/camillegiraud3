@@ -1,33 +1,58 @@
 <template>
   <Spacer>
-    <h1 class="display-3">
-      Entretien Espaces Verts
-    </h1>
-    <v-carousel>
-      <v-carousel-item v-for="image in images" :key="image" :src="image" />
-    </v-carousel>
-    <div id="contact">
-      <h2 class="display-1">
+    <v-parallax src="devanture.jpg">
+      <v-row align="center" justify="center">
+        <Spacer>
+          <h1 class="text-h2">
+            Camille GIRAUD
+          </h1>
+
+          <h1 class="text-h2 font-italic font-weight-thin">
+            Entretien Espaces Verts
+          </h1>
+        </Spacer>
+      </v-row>
+    </v-parallax>
+
+    <v-container>
+      <Spacer>
+        <h2 id="contact" class="text-h3">
+          Nous contacter
+        </h2>
+        <Contact />
+      </Spacer>
+    </v-container>
+
+    <v-parallax src="jardin.jpg" />
+
+    <v-container id="equipe">
+      <Spacer>
+        <h2 class="text-h3">
+          Notre équipe
+        </h2>
+        <v-alert type="warning">
+          Cette section est en attente du contenu nécessaire.
+        </v-alert>
+        <Equipe />
+      </Spacer>
+    </v-container>
+
+    <v-parallax src="mare.jpg" />
+
+    <!-- <v-bottom-navigation app>
+      <v-btn @click="$vuetify.goTo('#contact')">
         Nous contacter
-      </h2>
-      <Contact />
-    </div>
-    <div id="equipe">
-      <h2 class="display-1">
+      </v-btn>
+      <v-btn @click="$vuetify.goTo('#equipe')">
         Notre équipe
-      </h2>
-      <v-alert type="warning">
-        Cette section est en attente du contenu nécessaire.
-      </v-alert>
-      <Equipe />
-    </div>
+      </v-btn>
+    </v-bottom-navigation> -->
   </Spacer>
 </template>
 
-<script>
-export default {
-  data() {
-    return { images: ['devanture.jpg', 'jardin.jpg', 'mare.jpg'] }
-  },
+<style scoped>
+h1,
+h2 {
+  text-align: center;
 }
-</script>
+</style>

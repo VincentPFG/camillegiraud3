@@ -6,8 +6,8 @@ export default {
   target: 'static',
 
   head: {
-    titleTemplate: '%s - ' + process.env.npm_package_name,
-    title: process.env.npm_package_name || '',
+    // titleTemplate: '%s - ' + process.env.npm_package_name,
+    title: 'Camille GIRAUD - Entretien Espaces Verts',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -24,7 +24,7 @@ export default {
 
   css: [],
 
-  plugins: ['clipboard'].map((plugin) => '@/plugins/' + plugin),
+  plugins: ['clipboard', 'lorem'].map((plugin) => '@/plugins/' + plugin),
 
   components: true,
 

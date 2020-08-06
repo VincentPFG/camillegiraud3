@@ -21,13 +21,15 @@
               <v-card-actions>
                 <v-btn href="tel:+33670130803">
                   <v-icon color="primary">
-                    mdi-phone ><span>appeler</span>
+                    mdi-phone >
                   </v-icon>
+                  <span>appeler</span>
                 </v-btn>
                 <v-btn @click="doCopy('+33673120803', 'Numéro copié')">
                   <v-icon color="primary">
-                    mdi-content-copy ><span>copier</span>
+                    mdi-content-copy
                   </v-icon>
+                  <span>copier</span>
                 </v-btn>
               </v-card-actions>
             </v-card>
@@ -40,7 +42,10 @@
               <v-card-title>camille-giraud@orange.fr</v-card-title>
               <v-card-actions>
                 <v-btn href="mailto:camille-giraud@orange.fr">
-                  <v-icon color="primary"> mdi-pen <span>écrire</span> </v-icon>
+                  <v-icon color="primary">
+                    mdi-pen
+                  </v-icon>
+                  <span>écrire</span>
                 </v-btn>
                 <v-btn
                   @click="
@@ -48,8 +53,9 @@
                   "
                 >
                   <v-icon color="primary">
-                    mdi-content-copy ><span>copier</span>
+                    mdi-content-copy >
                   </v-icon>
+                  <span>copier</span>
                 </v-btn>
               </v-card-actions>
             </v-card>
