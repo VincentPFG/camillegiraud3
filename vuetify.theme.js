@@ -1,11 +1,11 @@
 import colors from 'vuetify/es5/util/colors'
 
 const { red, blue, green, orange } = colors
-const { teal } = colors
+const { teal, pink } = colors
 
 const base = {
   primary: teal,
-  secondary: green,
+  secondary: pink,
   error: red,
   info: blue,
   success: green,

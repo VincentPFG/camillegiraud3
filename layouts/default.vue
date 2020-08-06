@@ -1,27 +1,5 @@
 <template>
   <v-app>
-    <!-- <v-navigation-drawer v-model="drawer" app>
-      <v-list nav>
-        <v-list-item
-          v-for="{ route, name } in nav"
-          :key="name"
-          @click="
-            $vuetify.goTo(route)
-            drawer = defaultDrawer
-          "
-        >
-          <v-list-item-content>
-            <v-list-item-title>{{ name }}</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-      </v-list>
-    </v-navigation-drawer> -->
-    <!-- <v-app-bar app color="primary" collapse dense> -->
-    <!-- <v-app-bar-nav-icon @click="drawer = !drawer" /> -->
-    <!-- <v-toolbar-title>Camille GIRAUD</v-toolbar-title> -->
-    <!-- <v-spacer />
-      <Dark />
-    </v-app-bar> -->
     <v-main>
       <v-container>
         <v-alert type="warning">
@@ -50,26 +28,3 @@
     </v-footer>
   </v-app>
 </template>
-
-<script>
-export default {
-  data() {
-    return {
-      drawer: null,
-      defaultDrawer: null,
-      nav: [{ name: 'Nous contacter', route: '#contact' }],
-      bar: null,
-    }
-  },
-  mounted() {
-    this.defaultDrawer = this.drawer
-  },
-  methods: {
-    scroll() {
-      this.bar = false
-      // setInterval(() => (this.bar = false), 100)
-      this.$vuetify.goTo('#equipe')
-    },
-  },
-}
-</script>

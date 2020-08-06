@@ -23,13 +23,13 @@
                   <v-icon color="primary">
                     mdi-phone >
                   </v-icon>
-                  <span>appeler</span>
+                  appeler
                 </v-btn>
                 <v-btn @click="doCopy('+33673120803', 'Numéro copié')">
                   <v-icon color="primary">
                     mdi-content-copy
                   </v-icon>
-                  <span>copier</span>
+                  copier
                 </v-btn>
               </v-card-actions>
             </v-card>
@@ -45,7 +45,7 @@
                   <v-icon color="primary">
                     mdi-pen
                   </v-icon>
-                  <span>écrire</span>
+                  écrire
                 </v-btn>
                 <v-btn
                   @click="
@@ -55,7 +55,7 @@
                   <v-icon color="primary">
                     mdi-content-copy >
                   </v-icon>
-                  <span>copier</span>
+                  copier
                 </v-btn>
               </v-card-actions>
             </v-card>

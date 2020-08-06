@@ -62,8 +62,11 @@
           :rules="rules.name"
         />
         <v-row justify="center">
-          <v-btn type="submit" fab="fab" color="primary">
-            <v-icon>mdi-send</v-icon>
+          <v-btn type="submit" color="primary">
+            <v-icon class="mr-2">
+              mdi-send
+            </v-icon>
+            Envoyer
           </v-btn>
         </v-row>
       </v-container>
