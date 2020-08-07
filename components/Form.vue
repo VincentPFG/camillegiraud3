@@ -9,7 +9,7 @@
           <v-col cols="12" md="4">
             <v-select
               v-model="civil"
-              outlined="outlined"
+              outlined
               :items="civilItems"
               label="Civilité"
             />

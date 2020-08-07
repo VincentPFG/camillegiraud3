@@ -1,6 +1,5 @@
 backend:
-  name: github
-  repo: vincentpfg/test-ncms
+  name: git-gateway
 
 media_folder: static/img
 public_folder: /img
@@ -8,16 +7,13 @@ public_folder: /img
 locale: fr
 
 collections:
-  - name: 'blog'
-    label: 'Blog'
-    # format: "json"
-    folder: '/content/blog'
-    create: true
+  - name: equipe
+    label: Équipe
+    widget: list
+    folder: /content/equipe
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
-    # editor:
-    #   preview: false
     fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Description', name: 'description', widget: 'string' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: 'Avatar', name: 'avatar', widget: 'image' }
+      - { label: 'Nom', name: 'name', widget: 'string' }
+      - { label: 'Poste', name: 'post', widget: 'string' }
+      - { label: 'Description', name: 'description', widget: 'text' }

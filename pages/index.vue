@@ -6,7 +6,6 @@
           <h1 class="text-h2">
             Camille GIRAUD
           </h1>
-
           <h1 class="text-h2 font-italic font-weight-thin">
             Entretien Espaces Verts
           </h1>
@@ -14,9 +13,9 @@
       </v-row>
     </v-parallax>
 
-    <v-container>
+    <v-container id="contact">
       <Spacer>
-        <h2 id="contact" class="text-h3">
+        <h2 class="text-h3">
           Nous contacter
         </h2>
         <Contact />
@@ -38,15 +37,6 @@
     </v-container>
 
     <v-parallax src="mare.jpg" />
-
-    <!-- <v-bottom-navigation app>
-      <v-btn @click="$vuetify.goTo('#contact')">
-        Nous contacter
-      </v-btn>
-      <v-btn @click="$vuetify.goTo('#equipe')">
-        Notre équipe
-      </v-btn>
-    </v-bottom-navigation> -->
   </Spacer>
 </template>
 
