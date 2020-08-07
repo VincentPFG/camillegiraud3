@@ -17,7 +17,10 @@
               <v-card flat color="transparent">
                 <v-card-title>Prénom NOM</v-card-title>
                 <v-card-subtitle>Poste</v-card-subtitle>
-                <v-card-text v-text="$lorem.generateParagraphs(2)" />
+                <v-card-text
+                  class="text-justify"
+                  v-text="$lorem.generateParagraphs(2)"
+                />
               </v-card>
             </v-col>
           </v-row>
@@ -26,3 +29,12 @@
     </v-window>
   </v-card>
 </template>
+
+<script>
+export default {
+  async asyncData({ $content }) {
+    const equipe = await $content('equipe').fetch()
+    return { equipe }
+  },
+}
+</script>
