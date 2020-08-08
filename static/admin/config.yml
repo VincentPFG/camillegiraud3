@@ -10,7 +10,6 @@ collections:
   - name: equipe
     label: Équipe
     folder: /content/
-    slug: equipe
     fields:
       - name: member
         label: Member
