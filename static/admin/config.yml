@@ -10,12 +10,13 @@ collections:
   - name: equipe
     label: Équipe
     folder: /content/
+    slug: equipe
     fields:
       - name: member
         label: Member
         widget: list
         fields:
-          - { label: 'Avatar', name: 'avatar', widget: 'image' }
           - { label: 'Nom', name: 'name', widget: 'string' }
           - { label: 'Poste', name: 'post', widget: 'string' }
           - { label: 'Description', name: 'description', widget: 'text' }
+          - { label: 'Avatar', name: 'avatar', widget: 'image' }
