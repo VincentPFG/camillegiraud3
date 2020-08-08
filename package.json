@@ -16,6 +16,7 @@
     "@nuxtjs/axios": "^5.11.0",
     "@nuxtjs/pwa": "^3.0.0-beta.20",
     "lorem-ipsum": "^2.0.3",
+    "netlify-identity-widget": "^1.9.1",
     "nuxt": "^2.13.0",
     "vue-clipboard2": "^0.3.1"
   },
