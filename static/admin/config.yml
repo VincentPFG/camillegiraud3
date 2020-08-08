@@ -7,15 +7,32 @@ public_folder: /img
 locale: fr
 
 collections:
-  - name: equipe
-    label: Équipe
-    folder: /content/
-    fields:
-      - name: member
-        label: Member
-        widget: list
-        fields:
-          - { label: 'Nom', name: 'name', widget: 'string' }
-          - { label: 'Poste', name: 'post', widget: 'string' }
-          - { label: 'Description', name: 'description', widget: 'text' }
-          - { label: 'Avatar', name: 'avatar', widget: 'image' }
+  [
+    {
+      name: equipe,
+      label: Équipe,
+      files:
+        [
+          {
+            name: list,
+            label: Liste des membres,
+            file: /content/equipe.md,
+            fields:
+              [
+                {
+                  name: member,
+                  label: Member,
+                  widget: list,
+                  fields:
+                    [
+                      { label: Nom, name: name, widget: string },
+                      { label: Poste, name: post, widget: string },
+                      { label: Description, name: description, widget: text },
+                      { label: Avatar, name: avatar, widget: image },
+                    ],
+                },
+              ],
+          },
+        ],
+    },
+  ]
