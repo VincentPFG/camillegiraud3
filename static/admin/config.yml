@@ -11,8 +11,8 @@ collections:
     label: Équipe
     folder: /content/
     fields:
-      - name: list
-        label: Liste
+      - name: member
+        label: Member
         widget: list
         fields:
           - { label: 'Avatar', name: 'avatar', widget: 'image' }

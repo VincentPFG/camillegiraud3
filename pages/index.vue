@@ -1,6 +1,6 @@
 <template>
   <Spacer>
-    <v-parallax src="devanture.jpg">
+    <v-parallax src="img/devanture.jpg">
       <v-row align="center" justify="center">
         <Spacer>
           <h1 class="text-h2">
@@ -22,7 +22,7 @@
       </Spacer>
     </v-container>
 
-    <v-parallax src="jardin.jpg" />
+    <v-parallax src="img/jardin.jpg" />
 
     <v-container id="equipe">
       <Spacer>
@@ -36,7 +36,7 @@
       </Spacer>
     </v-container>
 
-    <v-parallax src="mare.jpg" />
+    <v-parallax src="img/mare.jpg" />
   </Spacer>
 </template>
 
