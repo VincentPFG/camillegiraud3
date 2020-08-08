@@ -20,8 +20,8 @@ collections:
             fields:
               [
                 {
-                  name: member,
-                  label: Member,
+                  name: members,
+                  label: Membre,
                   widget: list,
                   fields:
                     [
