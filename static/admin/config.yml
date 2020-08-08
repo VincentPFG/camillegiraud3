@@ -1,5 +1,4 @@
-backend:
-  name: git-gateway
+backend: { name: git-gateway }
 
 media_folder: static/img
 public_folder: /img
@@ -17,6 +16,7 @@ collections:
             name: list,
             label: Liste des membres,
             file: /content/equipe.md,
+            editor: { preview: false },
             fields:
               [
                 {
