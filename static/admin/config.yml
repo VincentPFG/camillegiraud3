@@ -9,11 +9,13 @@ locale: fr
 collections:
   - name: equipe
     label: Équipe
-    widget: list
-    folder: /content/equipe
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    folder: /content/
     fields:
-      - { label: 'Avatar', name: 'avatar', widget: 'image' }
-      - { label: 'Nom', name: 'name', widget: 'string' }
-      - { label: 'Poste', name: 'post', widget: 'string' }
-      - { label: 'Description', name: 'description', widget: 'text' }
+      - name: list
+      - label: Liste
+      - widget: list
+      - fields:
+          - { label: 'Avatar', name: 'avatar', widget: 'image' }
+          - { label: 'Nom', name: 'name', widget: 'string' }
+          - { label: 'Poste', name: 'post', widget: 'string' }
+          - { label: 'Description', name: 'description', widget: 'text' }
