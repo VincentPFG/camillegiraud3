@@ -10,13 +10,13 @@ collections:
     {
       name: equipe,
       label: Équipe,
+      editor: { preview: false },
       files:
         [
           {
             name: list,
             label: Liste des membres,
             file: /content/equipe.md,
-            editor: { preview: false },
             fields:
               [
                 {
