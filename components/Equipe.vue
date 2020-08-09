@@ -1,6 +1,6 @@
 <template>
   <v-card>
-    <v-window show-arrows-on-hover>
+    <v-window show-arrows show-arrows-on-hover>
       <v-window-item
         v-for="{ avatar, name, post, description } in members"
         :key="name"
