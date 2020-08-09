@@ -1,7 +1,7 @@
 <template>
   <v-card>
-    <v-window show-arrows show-arrows-on-hover>
-      <v-window-item
+    <v-carousel hide-delimiter-background>
+      <v-carousel-item
         v-for="{ avatar, name, post, description } in members"
         :key="name"
       >
@@ -26,8 +26,8 @@
             </v-col>
           </v-row>
         </v-container>
-      </v-window-item>
-    </v-window>
+      </v-carousel-item>
+    </v-carousel>
   </v-card>
 </template>
 
