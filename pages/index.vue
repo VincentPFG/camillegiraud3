@@ -69,7 +69,6 @@
     </v-container>
 
     <v-parallax src="img/mare.jpg" />
-    <p>{{ members }}</p>
   </Spacer>
 </template>
 

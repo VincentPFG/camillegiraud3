@@ -5,7 +5,6 @@
         v-for="{ avatar, name, post, description } in members"
         :key="name"
       >
-        <h1>{{ name }}</h1>
         <v-container>
           <v-row>
             <v-col cols="12" md="6">
