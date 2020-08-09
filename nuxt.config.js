@@ -24,7 +24,7 @@ export default {
 
   css: [],
 
-  plugins: ['clipboard', 'lorem', 'identity.client'].map(
+  plugins: ['clipboard', 'identity.client'].map(
     (plugin) => '@/plugins/' + plugin
   ),
 

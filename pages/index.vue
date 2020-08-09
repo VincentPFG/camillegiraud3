@@ -32,13 +32,24 @@
         <v-alert type="warning">
           Cette section est en attente du contenu nécessaire.
         </v-alert>
-        <Equipe />
+        <Equipe :members="members" />
       </Spacer>
     </v-container>
 
     <v-parallax src="img/mare.jpg" />
+    <p>{{ members }}</p>
   </Spacer>
 </template>
+
+<script>
+export default {
+  async asyncData({ $content }) {
+    const { members } = await $content('equipe').fetch()
+    console.log(members)
+    return { members }
+  },
+}
+</script>
 
 <style scoped>
 h1,
