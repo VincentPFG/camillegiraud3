@@ -21,7 +21,6 @@
                 <v-card-text class="text-justify">
                   {{ description }}
                 </v-card-text>
-                <v-card-text>dyauydiuy aiuydi dyyd iuaydy </v-card-text>
               </v-card>
             </v-col>
           </v-row>
