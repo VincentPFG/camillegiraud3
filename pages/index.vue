@@ -1,44 +1,42 @@
 <template>
-  <Spacer>
+  <div>
     <v-parallax src="img/devanture.jpg">
       <v-row align="center" justify="center">
-        <Spacer>
+        <v-col cols="12">
           <h1 class="text-h2">
             Camille GIRAUD
           </h1>
+        </v-col>
+        <v-col cols="12">
           <h1 class="text-h2 font-italic font-weight-thin">
             Entretien Espaces Verts
           </h1>
-        </Spacer>
+        </v-col>
       </v-row>
     </v-parallax>
 
     <v-container id="contact">
-      <Spacer>
-        <h2 class="text-h3">
-          Nous contacter
-        </h2>
-        <Contact />
-      </Spacer>
+      <h2 class="text-h3">
+        Nous contacter
+      </h2>
+      <Contact />
     </v-container>
 
     <v-parallax src="img/jardin.jpg" />
 
     <v-container id="equipe">
-      <Spacer>
-        <h2 class="text-h3">
-          Notre équipe
-        </h2>
-        <v-alert type="warning">
-          Cette section est en attente du contenu nécessaire.
-        </v-alert>
+      <h2 class="text-h3">
+        Notre équipe
+      </h2>
+      <v-alert type="warning">
+        Cette section est en attente du contenu nécessaire.
+      </v-alert>
 
-        <Equipe :members="members" />
-      </Spacer>
+      <Equipe :members="members" />
     </v-container>
 
     <v-parallax src="img/mare.jpg" />
-  </Spacer>
+  </div>
 </template>
 
 <script>
@@ -54,5 +52,8 @@ export default {
 h1,
 h2 {
   text-align: center;
+}
+* {
+  margin: 5vh auto;
 }
 </style>
