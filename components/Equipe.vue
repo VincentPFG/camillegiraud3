@@ -1,6 +1,6 @@
 <template>
   <v-card>
-    <v-carousel hide-delimiter-background>
+    <v-carousel :light="!$vuetify.theme.dark" hide-delimiter-background>
       <v-carousel-item
         v-for="{ avatar, name, post, description } in members"
         :key="name"
@@ -21,6 +21,7 @@
                 <v-card-text class="text-justify">
                   {{ description }}
                 </v-card-text>
+                <v-card-text>dyauydiuy aiuydi dyyd iuaydy </v-card-text>
               </v-card>
             </v-col>
           </v-row>
