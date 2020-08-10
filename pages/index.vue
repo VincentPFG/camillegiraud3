@@ -45,7 +45,6 @@
 export default {
   async asyncData({ $content }) {
     const { members } = await $content('equipe').fetch()
-    console.log(members)
     return { members }
   },
 }
