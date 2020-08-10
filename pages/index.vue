@@ -28,7 +28,8 @@
       <h2 class="text-h3">
         Notre équipe
       </h2>
-      <v-alert type="warning">
+
+      <v-alert v-if="!members.length" type="warning">
         Cette section est en attente du contenu nécessaire.
       </v-alert>
 

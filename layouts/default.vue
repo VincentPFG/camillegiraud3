@@ -22,7 +22,7 @@
     </v-bottom-navigation>
 
     <v-footer app absolute color="primary">
-      <v-row justify="center">
+      <v-row justify="center" class="white--text">
         Développé par Vincent GIRAUD
       </v-row>
     </v-footer>
