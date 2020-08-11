@@ -1,18 +1,12 @@
 <template>
   <div>
     <v-parallax src="img/devanture.jpg">
-      <v-row align="center" justify="center">
-        <v-col cols="12">
-          <h1 class="text-h2">
-            Camille GIRAUD
-          </h1>
-        </v-col>
-        <v-col cols="12">
-          <h1 class="text-h2 font-italic font-weight-thin">
-            Entretien Espaces Verts
-          </h1>
-        </v-col>
-      </v-row>
+      <h1 class="text-h2">
+        Camille GIRAUD
+      </h1>
+      <h1 class="text-h2 font-italic font-weight-thin">
+        Entretien Espaces Verts
+      </h1>
     </v-parallax>
 
     <v-container id="contact">

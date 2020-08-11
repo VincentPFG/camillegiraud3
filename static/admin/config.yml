@@ -1,7 +1,7 @@
 backend: { name: git-gateway }
 
-media_folder: static/img
-public_folder: /img
+media_folder: static/cms
+public_folder: /cms
 
 locale: fr
 
