@@ -71,13 +71,13 @@
         </v-row>
       </v-container>
     </v-form>
-    <v-snackbar v-model="successSB" color="success" :timeout="0">
+    <v-snackbar v-model="successSB" color="success" :timeout="-1">
       Formulaire envoyé
       <v-btn icon="icon" @click="successSB = false">
         <v-icon>mdi-close</v-icon>
       </v-btn>
     </v-snackbar>
-    <v-snackbar v-model="errorSB" color="error" :timeout="0">
+    <v-snackbar v-model="errorSB" color="error" :timeout="-1">
       Une erreur est survenue
       <v-btn icon="icon" @click="arrorSB = false">
         <v-icon>mdi-close</v-icon>
@@ -88,8 +88,8 @@
 
 <script>
 const encode = (data) =>
-  data
-    .map((key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
+  Object.entries(data)
+    .map(([k, v]) => `${encodeURIComponent(k)}=${encodeURIComponent(v)}`)
     .join('&')
 const requis = (v) => !!v || 'Requis'
 export default {
