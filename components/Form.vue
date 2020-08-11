@@ -71,7 +71,7 @@
         </v-row>
       </v-container>
     </v-form>
-    <v-snackbar v-model="successSB" color="success" :timeout="-1">
+    <!-- <v-snackbar v-model="successSB" color="success" :timeout="-1">
       Formulaire envoyé
       <v-btn icon="icon" @click="successSB = false">
         <v-icon>mdi-close</v-icon>
@@ -82,6 +82,18 @@
       <v-btn icon="icon" @click="arrorSB = false">
         <v-icon>mdi-close</v-icon>
       </v-btn>
+    </v-snackbar> -->
+    <v-snackbar
+      v-model="snackbar"
+      :color="failed ? 'error' : 'success'"
+      :timeout="-1"
+    >
+      {{ failed ? 'Une erreur est survenue' : 'Formulaire envoyé' }}
+      <template #action>
+        <v-btn icon @click="snackbar = false">
+          <v-icon>mdi-close</v-icon>
+        </v-btn>
+      </template>
     </v-snackbar>
   </div>
 </template>
@@ -101,7 +113,7 @@ export default {
       address: '',
       name: '',
       civil: '',
-      dialog: false,
+      // dialog: false,
       civilItems: ['Madame', 'Monsieur'],
       rules: {
         name: [requis],
@@ -116,21 +128,57 @@ export default {
             'Le format semble invalide',
         ],
       },
-      successSB: false,
-      errorSB: false,
+      // successSB: false,
+      // errorSB: false,
+      snackbar: false,
+      failed: null,
     }
   },
   methods: {
-    onSubmit() {
+    async onSubmit() {
       if (this.$refs.form.validate()) {
-        fetch('/', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/x-www-form-urlencoded',
-          },
-          body: encode({
-            'form-name': 'contact',
-            contenu: `
+        // fetch('/', {
+        //   method: 'POST',
+        //   headers: {
+        //     'Content-Type': 'application/x-www-form-urlencoded',
+        //   },
+        //   body: encode({
+        //     'form-name': 'contact',
+        //     contenu: `
+
+        //         ${this.civil} ${this.name}
+
+        //         ${this.phone}   ${this.email}
+
+        //         ${this.address}
+
+        //         ${this.message}
+        //     `,
+        //   }),
+        // })
+        //   .then(() => {
+        //     // this.dialog = false
+        //     this.$refs.form.reset()
+        //     // this.successSB = true
+        //     this.failed = false
+        //     this.snackbar = true
+        //   })
+        //   .catch(() => {
+        //     // this.dialog = false
+        //     // this.errorSB = true
+        //     this.failed = true
+        //     this.snackbar = true
+        //   })
+
+        try {
+          await fetch('/', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: encode({
+              'form-name': 'contact',
+              contenu: `
 
                 ${this.civil} ${this.name}
 
@@ -140,17 +188,16 @@ export default {
 
                 ${this.message}
             `,
-          }),
-        })
-          .then(() => {
-            this.dialog = false
-            this.$refs.form.reset()
-            this.successSB = true
+            }),
           })
-          .catch(() => {
-            this.dialog = false
-            this.errorSB = true
-          })
+
+          this.$refs.form.reset()
+          this.failed = false
+          this.snackbar = true
+        } catch {
+          this.failed = true
+          this.snackbar = true
+        }
       }
     },
   },
