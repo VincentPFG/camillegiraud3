@@ -6,7 +6,7 @@
     <v-form ref="form" @submit.prevent="onSubmit">
       <v-container>
         <v-row>
-          <v-col cols="12" md="4">
+          <v-col cols="12" sm="4">
             <v-select
               v-model="civil"
               outlined
@@ -14,7 +14,7 @@
               label="Civilité"
             />
           </v-col>
-          <v-col cols="12" md="8">
+          <v-col cols="12" sm="8">
             <v-text-field
               v-model="name"
               outlined
@@ -22,9 +22,9 @@
               :rules="rules.name"
             />
           </v-col>
-        </v-row>
-        <v-row>
-          <v-col cols="12" md="4">
+          <!-- </v-row>
+        <v-row> -->
+          <v-col cols="12" md="4" sm="6">
             <v-text-field
               v-model="phone"
               outlined
@@ -34,7 +34,7 @@
               prepend-icon="mdi-cellphone"
             />
           </v-col>
-          <v-col cols="12" md="4">
+          <v-col cols="12" md="4" sm="6">
             <v-text-field
               v-model="email"
               outlined
@@ -44,7 +44,7 @@
               prepend-icon="mdi-email"
             />
           </v-col>
-          <v-col cols="12" md="4">
+          <v-col cols="12" md="4" sm="12">
             <v-textarea
               v-model="address"
               outlined
@@ -71,18 +71,7 @@
         </v-row>
       </v-container>
     </v-form>
-    <!-- <v-snackbar v-model="successSB" color="success" :timeout="-1">
-      Formulaire envoyé
-      <v-btn icon="icon" @click="successSB = false">
-        <v-icon>mdi-close</v-icon>
-      </v-btn>
-    </v-snackbar>
-    <v-snackbar v-model="errorSB" color="error" :timeout="-1">
-      Une erreur est survenue
-      <v-btn icon="icon" @click="arrorSB = false">
-        <v-icon>mdi-close</v-icon>
-      </v-btn>
-    </v-snackbar> -->
+
     <v-snackbar
       v-model="snackbar"
       :color="failed ? 'error' : 'success'"
@@ -113,7 +102,6 @@ export default {
       address: '',
       name: '',
       civil: '',
-      // dialog: false,
       civilItems: ['Madame', 'Monsieur'],
       rules: {
         name: [requis],
@@ -128,8 +116,7 @@ export default {
             'Le format semble invalide',
         ],
       },
-      // successSB: false,
-      // errorSB: false,
+
       snackbar: false,
       failed: null,
     }
@@ -137,39 +124,6 @@ export default {
   methods: {
     async onSubmit() {
       if (this.$refs.form.validate()) {
-        // fetch('/', {
-        //   method: 'POST',
-        //   headers: {
-        //     'Content-Type': 'application/x-www-form-urlencoded',
-        //   },
-        //   body: encode({
-        //     'form-name': 'contact',
-        //     contenu: `
-
-        //         ${this.civil} ${this.name}
-
-        //         ${this.phone}   ${this.email}
-
-        //         ${this.address}
-
-        //         ${this.message}
-        //     `,
-        //   }),
-        // })
-        //   .then(() => {
-        //     // this.dialog = false
-        //     this.$refs.form.reset()
-        //     // this.successSB = true
-        //     this.failed = false
-        //     this.snackbar = true
-        //   })
-        //   .catch(() => {
-        //     // this.dialog = false
-        //     // this.errorSB = true
-        //     this.failed = true
-        //     this.snackbar = true
-        //   })
-
         try {
           await fetch('/', {
             method: 'POST',
