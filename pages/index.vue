@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-parallax src="img/devanture.jpg">
+    <v-parallax :src="imgs[0]">
       <h1 class="text-h2">
         Camille GIRAUD
       </h1>
@@ -16,7 +16,7 @@
       <Contact />
     </v-container>
 
-    <v-parallax src="img/jardin.jpg" />
+    <v-parallax :src="imgs[1]" />
 
     <v-container id="equipe">
       <h2 class="text-h3">
@@ -30,7 +30,7 @@
       <Equipe :members="members" />
     </v-container>
 
-    <v-parallax src="img/mare.jpg" />
+    <v-parallax :src="imgs[2]" />
   </div>
 </template>
 
@@ -39,6 +39,11 @@ export default {
   async asyncData({ $content }) {
     const { members } = await $content('equipe').fetch()
     return { members }
+  },
+  data() {
+    return {
+      imgs: ['devanture', 'jardin', 'mare'].map((img) => `webp/${img}.webp`),
+    }
   },
 }
 </script>
