@@ -28,7 +28,7 @@ collections:
                       { label: Nom, name: name, widget: string },
                       { label: Poste, name: post, widget: string },
                       { label: Description, name: description, widget: text },
-                      { label: Avatar, name: avatar, widget: image },
+                      { label: Avatar, name: avatar, widget: image, required: false },
                     ],
                 },
               ],

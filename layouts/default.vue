@@ -1,11 +1,11 @@
 <template>
   <v-app>
     <v-main>
-      <v-container>
+      <!-- <v-container>
         <v-alert type="warning">
           Ce site est en cours de développement.
         </v-alert>
-      </v-container>
+      </v-container> -->
       <nuxt />
     </v-main>
 
