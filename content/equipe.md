@@ -9,4 +9,7 @@ members:
   - name: Charles
     post: Employé
     description: " "
+  - name: Sullivan
+    post: Employé
+    description: " "
 ---
