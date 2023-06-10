@@ -2,5 +2,5 @@
 members:
   - name: Camille GIRAUD
     post: Gérant de l’entreprise
-    description: description temporaire
+    description: Depuis 1986.
 ---
