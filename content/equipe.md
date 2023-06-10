@@ -12,4 +12,7 @@ members:
   - name: Sullivan
     post: Employé
     description: " "
+  - name: Mathias
+    post: Apprenti
+    description: " "
 ---
