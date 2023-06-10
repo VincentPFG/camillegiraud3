@@ -6,4 +6,7 @@ members:
   - name: Dylan
     post: Employé
     description: " "
+  - name: Charles
+    post: Employé
+    description: " "
 ---
