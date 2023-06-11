@@ -5,9 +5,9 @@
         Formulaire de contact
       </v-expansion-panel-header>
       <v-expansion-panel-content>
-        <v-alert type="info">
+        <!-- <v-alert type="info">
           Ce formulaire est opérationnel.
-        </v-alert>
+        </v-alert> -->
         <Form />
       </v-expansion-panel-content>
     </v-expansion-panel>
