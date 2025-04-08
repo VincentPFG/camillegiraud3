@@ -9,6 +9,16 @@
       </h1>
     </v-parallax>
 
+    <v-alert type="warning">
+      Après plusieurs décennies de fonctionnement, notre entreprise se voit
+      contrainte de cesser ses services.
+    </v-alert>
+    <v-alert type="info">
+      Il est encore possible d’utiliser le formulaire présent sur notre site à
+      des fins de remerciements, ou de demandes concernant la continuation de
+      l'entretien de vos espaces verts et être redirigé vers nos partenaires.
+    </v-alert>
+
     <v-container id="contact">
       <h2 class="text-h3">
         Nous contacter
