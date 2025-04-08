@@ -20,7 +20,6 @@
         l'entretien de vos espaces verts et être redirigé vers nos partenaires.
       </v-alert>
     </v-container>
-    >
 
     <v-container id="contact">
       <h2 class="text-h3">
